@@ -1,0 +1,398 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+
+<title>Inscites</title>
+
+<!-- css -->
+<link rel="stylesheet" href="css/normalize.css" />
+<link rel="stylesheet" href="css/styles.css" />
+
+<!-- fonts -->
+<link rel="stylesheet" type="text/css" href="fonts/roboto/roboto.css" />
+<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.min.css" />
+
+<!-- jQuery, HTML5 IE fix -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+
+<body>
+
+<!-- login page -->
+<section id="login">
+	<img src="img/logo.png">
+	<label>Email Address:<input type="text" placeholder="JohnDoe@mail.com" name="email"></label>
+	<label>Password:<input type="text" placeholder="********" name="password"></label>
+	<button id="signIn" type="button">Sign In</button>
+	<button id="register" type="button">Register</button>
+
+	<div id="betaAlert" class="modal">
+		<div id="betaAlertClose" class="modalClose"><i class="fa fa-times-circle"></i></div>
+		<p>Inscites is currently in beta testing. Please check back soon for registration.</p>
+	</div>
+</section>	
+
+
+<!-- header -->
+<header>
+	<h1><!-- auto inserted by custom.js--></h1>
+
+	<div id="headerSearch">
+		<i class="fa fa-search"></i>
+	</div>
+</header>
+
+<!-- newsfeed -->
+
+<section id="news">
+
+	<div id="newsBack">
+		<i class="fa fa-chevron-left "></i>
+	</div>
+
+	<div class="filter">
+		<div class="filterMenu"><i class="fa fa-filter"></i>
+			<select>
+			 	<option>All</option>
+				<option>Chem 203</option>
+				<option>Will's project</option>
+				<option>Experiment 0228</option>
+			</select>
+		</div>	
+	</div>	
+
+	<div class="search cf">
+		<input class="searchField" type="textarea" placeholder="chemistry" name="search Inscites">
+		<button class="searchSubmit" type="button">search</button>
+	</div>
+
+	<div class="searchResults">
+		<span class="emphasis">2</span> results found for <span class="emphasis">chemistry</span>.
+	</div>
+
+	<div class="item">
+		<h2>Caffeine</h2>
+		<p><span class="emphasis">Will Jones</span> created a molecule <span class="emphasis">2 days ago</span></p>
+		<img src="img/caffeine.png" alt="molecule">
+		<p class="itemDescription">Caffeine is a bitter, white crystalline purine, a methylxanthine alkaloid, and thus closely related chemically to the adenine and guanine contained in deoxyribonucleic acid (DNA). It is found in the seeds, nuts, or leaves of a small number of plants native to South America.</p>
+		<p>#chemistry</p>
+
+		<ul class="contact">
+			<li class="contactIcon"><i class="fa fa-envelope"></i></li>
+			<li class="contactMessage">Message</li>
+			<li class="contactEditRequest">Ask to Edit</li>
+			<li class="contactFollowRequest">Ask to Follow</li>
+		</ul>
+		<div class="message">
+			<textarea class="messageText" placeholder="" name="message"></textarea>
+			<div class="messageRecipient cf">
+				<input class="messageSelectUser" type="text" placeholder="Select User" name="user">
+				<button class="messageAddUser" type="button">Add User</button>
+			</div>	
+			<div class="messageEmailUser">
+				<label><input type="checkbox" value="Email message to user?" name="emailUser">
+				Email copy of message to user?</label>
+			</div>
+			<button class="messageSend" type="button">Send</button>
+		</div>
+	</div>
+
+	<div class="item">
+		<h2>New Lab Equipment</h2>
+		<p><span class="emphasis">Tom Miller</span> uploaded an image <span class="emphasis">3 days ago</span></p>
+		<img src="img/lab.jpg" alt="molecule">
+		<p class="itemDescription">Big improvements for the molecular biology lab here! Thanks to everyone who helped set everything up.</p>
+		<p>#chemistry</p>
+
+		<ul class="contact">
+			<li class="contactIcon"><i class="fa fa-envelope"></i></li>
+			<li class="contactMessage">Message</li>
+			<li class="contactEditRequest">Ask to Edit</li>
+			<li class="contactFollowRequest">Ask to Follow</li>
+		</ul>
+		<div class="message">
+			<textarea class="messageText" placeholder="" name="message"></textarea>
+			<div class="messageRecipient cf">
+				<input class="messageSelectUser" type="text" placeholder="Select User" name="user">
+				<button class="messageAddUser" type="button">Add User</button>
+			</div>	
+			<div class="messageEmailUser">
+				<label><input type="checkbox" value="Email message to user?" name="emailUser">
+				Email copy of message to user?</label>
+			</div>
+			<button class="messageSend" type="button">Send</button>
+		</div>
+	</div>
+
+	<div id="newsMessageSent" class="modal">
+		<div id="newsMessageSentClose" class="modalClose"><i class="fa fa-times-circle"></i></div>
+		<p>Message sent.</p>
+	</div>
+
+</section>
+
+<!-- library -->
+
+<section id="library">
+
+	<div id="libraryBack">
+		<i class="fa fa-chevron-left "></i>
+	</div>
+
+	<div class="filter cf">
+		<div class="filterMenu"><i class="fa fa-filter"></i>
+			<select>
+				<option>All</option>
+				<option>Datasets</option>
+				<option>Equations</option>
+				<option>Files</option>
+				<option>Molecules</option>
+				<option>Notes</option>
+				<option>Protocols</option>
+			</select>				
+		</div>	
+
+		<div class="sortMenu">
+			<select>
+				<option>Title</option>
+				<option>Date</option>
+			</select>
+			<i class="fa fa-sort"></i>				
+		</div>	
+	</div>
+
+	<div class="search cf">
+		<input class="searchField" type="textarea" placeholder="data" name="search library">
+		<button class="searchSubmit" type="button">search</button>
+	</div>
+
+	<div class="searchResults">
+		<span class="emphasis">2</span> results found for <span class="emphasis">data</span>.
+	</div>
+
+	<div class="item">
+		<h2>Schrödinger Equation</h2>
+		<p><span class="emphasis">Equation</span> created <span class="emphasis">2 days ago</span></p>
+		<img src="img/schrodinger-equation.png" alt="dataset">
+		<p class="itemDescription">In quantum mechanics, the Schrödinger equation is a partial differential equation that describes how the quantum state of a physical system changes with time. It was formulated in late 1925, and published in 1926, by the Austrian physicist Erwin Schrödinger.</p>
+		<p>#equation #data</p>
+	</div>	
+
+	<div class="item">
+		<h2>Saturation-state Sensitivity of Marine Bivalve Larvae to Ocean Acidifications</h2>
+		<p><span class="emphasis">Dataset</span> created <span class="emphasis">4 days ago</span></p>
+		<img src="img/datasets.jpg" alt="dataset">
+		<p class="itemDescription">a, Values for the two experiments on Mytilus galloprovincialis. b, Values for the two experiments on Crassostrea gigas. Circle and square symbols represent chemistry for the first and second experiments, respectively.</p>
+		<p>#data</p>
+	</div>	
+
+</section>
+
+<!-- create -->
+
+<section id="create">
+
+	<div id="createBack">
+		<i class="fa fa-chevron-left "></i>
+	</div>
+
+	<div class="createLink noteLink">
+		<i class="fa fa-pencil"></i> Write a Note
+	</div>
+
+	<div class="createLink photoLink">
+		<i class="fa fa-camera"></i> Add a Photo
+	</div>
+
+	<div class="createLink fileLink">
+		<i class="fa fa-upload"></i> Upload a File
+	</div>
+
+	<div id="createNote">
+		<label>Title <input type="text" id="noteTitle" name="noteTitle" placeholder="To-do list" /></label>
+		<label>Body <textarea id="noteContent" name="noteContent" placeholder="Complete Experiment #2, write lab report"/></textarea></label>
+		<label>Permissions:
+			<select>
+			 	<option>Private</option>
+				<option>Research Group</option>
+				<option>Collaborator</option>
+				<option>Connection</option>
+				<option>Public</option>
+			</select>
+		</label>
+
+		<div class="cf">	
+			<button class="cancel" type="button">Cancel</button>
+			<button class="submit" type="button">OK</button>
+		</div>
+
+		<div id="noteAdded" class="modal">
+			<div id="noteAddedClose" class="modalClose"><i class="fa fa-times-circle"></i></div>
+			<p>New note added to library.</p>
+		</div>
+	</div>
+
+	<div id="createPhoto">
+		<img src="img/beaker.jpg">
+		<label>Title <input type="text" id="photoTitle" name="photoTitle" placeholder="Beaker" /></label>
+		<label>Description <input type="textarea" id="photoDescription" name="photoDescription" placeholder="Look what I found in the lab!"/></label>
+		<label>Permissions
+			<select>
+			 	<option>Private</option>
+				<option>Research Group</option>
+				<option>Collaborator</option>
+				<option>Connection</option>
+				<option>Public</option>
+			</select>
+		</label>
+
+		<div class="cf">	
+			<button class="cancel" type="button">Cancel</button>
+			<button class="submit" type="button">OK</button>
+		</div>
+
+		<div id="photoAdded" class="modal">
+			<div id="photoAddedClose" class="modalClose"><i class="fa fa-times-circle"></i></div>
+			<p>New photo added to library.</p>
+		</div>
+	</div>
+
+	<div id="createFile">
+		<label>Title <input type="text" id="fileTitle" name="fileTitle" placeholder="lab-report.docx" /></label>
+		<label>Description <input type="textarea" id="fileDescription" name="fileDescription" placeholder="Revised lab report."/></label>
+		<label>Permissions
+			<select>
+			 	<option>Private</option>
+				<option>Research Group</option>
+				<option>Collaborator</option>
+				<option>Connection</option>
+				<option>Public</option>
+			</select>
+		</label>
+
+		<div class="cf">	
+			<button class="cancel" type="button">Cancel</button>
+			<button class="submit" type="button">OK</button>
+		</div>		
+
+		<div id="fileAdded" class="modal">
+			<div id="fileAddedClose" class="modalClose"><i class="fa fa-times-circle"></i></div>
+			<p>New file added to library.</p>
+		</div>
+	</div>
+
+</section>
+
+<!-- inbox -->
+
+<section id="inbox">
+
+	<div id="inboxBack">
+		<i class="fa fa-chevron-left "></i>
+	</div>
+
+	<div class="search cf">
+		<input class="searchField" type="textarea" placeholder="lab" name="search inbox">
+		<button class="searchSubmit" type="button">search</button>
+	</div>
+
+	<div class="searchResults">
+		<span class="emphasis">4</span> messages found for <span class="emphasis">lab</span>.
+	</div>
+
+	<button id="composeMessage" type="button">Write New Message</button>
+
+	<div class="item unread cf">
+		<p class="thumbtack"><i class="fa fa-thumb-tack"></i></p>
+		<img src="img/headshot1.jpg">
+		<p class="date">2 days ago</p>
+		<p class="from">Ian Clarke</p>
+		<p>Hey John, I have a question about...</p>
+	</div>
+
+	<div class="item cf">
+		<p class="thumbtack"><i class="fa fa-thumb-tack"></i></p>
+		<img src="img/headshot2.jpg">
+		<p class="date">2 days ago</p>
+		<p class="from">Susan Boyd</p>
+		<p>How did the lab setup go? I'm sorry...</p>
+	</div>
+
+	<div class="item unread cf">
+		<p class="thumbtack"><i class="fa fa-thumb-tack"></i></p>
+		<img src="img/headshot3.jpg">
+		<p class="date">3 days ago</p>
+		<p class="from">Mike Davis</p>
+		<p>We should follow up on the last...</p>
+	</div>
+
+	<div class="item cf">
+		<p class="thumbtack"><i class="fa fa-thumb-tack"></i></p>
+		<img src="img/headshot1.jpg">
+		<p class="date">3 days ago</p>
+		<p class="from">Ian Clarke</p>
+		<p>Still not sure that this makes sense...</p>
+	</div>
+
+	<div id="newMessage" class="message cf">
+		<div class="messageRecipient cf">
+			<input class="messageSelectUser" type="text" placeholder="Select User" name="user">
+			<button class="messageAddUser" type="button">Add User</button>
+		</div>	
+		<div class="messageEmailUser">
+			<label><input type="checkbox" value="Email message to user?" name="emailUser">
+			Email copy of message to user?</label>
+		</div>
+		<textarea class="messageText" placeholder="I think your calculations might be a little off. Can we get together tomorrow to discuss?" name="message"></textarea>
+		<button class="cancel" type="button">Cancel</button>
+		<button class="submit" type="button">Send</button>
+	</div>
+
+	<div id="inboxMessageSent" class="modal">
+		<div id="inboxMessageSentClose" class="modalClose"><i class="fa fa-times-circle"></i></div>
+		<p>Message sent.</p>
+	</div>
+</section>
+
+<!-- profile -->
+
+<section id="profile">
+
+	<button id="logout" type="button">Log Out</button>
+	<div class="item cf">
+		<img src="img/headshot4.jpg">
+		<h2>Bob Smith</h2>
+	</div>
+</section>
+
+<!-- nav -->
+
+<nav>
+	<div id="newsNav" class="navItem">
+		<i class="fa fa-home"></i><br /><span class="navLink">Newsfeed</span>
+	</div>
+	<div id="libraryNav" class="navItem">
+		<i class="fa fa-book"></i><br /><span class="navLink">Library</span>
+	</div>
+	<div id="createNav" class="navItem">
+		<i class="fa fa-upload"></i><br /><span class="navLink">Create</span>
+	</div>
+	<div id="inboxNav" class="navItem">
+		<i class="fa fa-envelope"></i><br /><span class="navLink">Inbox</span>
+	</div>
+	<div id="profileNav" class="navItem">
+		<i class="fa fa-user"></i><br /><span class="navLink">Profile</span>
+	</div>
+<nav>
+
+<script src="js/custom.js"></script>
+</body>
+</html>	
